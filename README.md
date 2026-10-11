@@ -1,12 +1,24 @@
 # 👟 Project Website - Partial Design with Database
 
-## ✨ Shoe Products Available:
+## ✨ Available Shoes:
 
-- 👟 Running Shoes — Lightweight & breathable for daily jogging
-- 🥾 Sneakers — Casual & comfortable for everyday wear
-- 🥿 Formal Shoes — Elegant design for professional occasions
-- 👢 Boots — Durable & stylish for all weather
-- 🩰 Flat Shoes — Soft & gentle for long walks
-- 🏃 Sports Sneakers — High-performance cushioning
-- 👜 Loafers — Classic slip-on style
-- 👠 Sandals — Trendy & lightweight for summer
+- Running Shoes
+- Sneakers
+- Formal Shoes
+- Boots
+- Flat Shoes
+- Sports Sneakers
+- Loafers
+- Sandals
+- Leather Shoes
+- Flip Flops
+- Hiking Boots
+- Ankle Boots
+- Training Shoes
+- Basketball Shoes
+- Water Shoes
+- Canvas Shoes
+- Wedge Shoes
+- Clogs
+- Platform Shoes
+- Slippers
