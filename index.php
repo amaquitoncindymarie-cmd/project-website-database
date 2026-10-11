@@ -1,31 +1,42 @@
-<?php
-include 'db.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Website</title>
+    <title>SoleStyle — Shoe Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>My Shoe Store</h1>
-    <p>Welcome to my website!</p>
+    <header>
+        <div class="container">
+            <h1>👟 SoleStyle Shoe Store</h1>
+            <p>Find your perfect pair — Quality brands at great prices</p>
+        </div>
+    </header>
 
-    <h2>Product List</h2>
-    <?php
-    $result = $conn->query("SELECT * FROM products");
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo "<div class='item'>";
-            echo "<strong>" . $row['name'] . "</strong><br>";
-            echo "Price: ₱" . number_format($row['price'], 2);
-            echo "</div>";
-        }
-    } else {
-        echo "<p>No products available.</p>";
-    }
-    ?>
+    <main class="container">
+        <h2>✨ Available Shoes</h2>
+        <div class="products-grid">
+            <?php
+            include 'db.php';
+            $stmt = $conn->query("SELECT * FROM products ORDER BY brand");
+            $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            foreach ($products as $item) {
+                echo "<div class='product-card'>";
+                echo "<h3>{$item['brand']}</h3>";
+                echo "<h4>{$item['name']}</h4>";
+                echo "<p class='price'>\${$item['price']}</p>";
+                echo "<p class='desc'>{$item['description']}</p>";
+                echo "<p class='durability'>Durability: {$item['durability']}</p>";
+                echo "</div>";
+            }
+            ?>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SoleStyle Shoe Store. All rights reserved.</p>
+    </footer>
 </body>
 </html>

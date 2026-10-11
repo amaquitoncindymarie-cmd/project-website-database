@@ -1,30 +1,104 @@
+/* SoleStyle Shoe Store — Main Stylesheet */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    max-width: 700px;
-    margin: 30px auto;
+    background: linear-gradient(135deg, #f5f7fa, #e4e8ec);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 20px;
-    background: #f9f9f9;
 }
 
-h1 {
+header {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 2rem;
     color: #2c3e50;
-    text-align: center;
+    margin-bottom: 40px;
 }
 
-h2 {
-    color: #34495e;
-    margin-top: 30px;
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-p {
-    text-align: center;
-    color: #666;
-}
-
-.item {
+.product-card {
     background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 6px;
-    border-left: 4px solid #3498db;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.product-card h3 {
+    color: #2980b9;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.product-card h4 {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.desc {
+    color: #777;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.durability {
+    font-weight: 500;
+    color: #e67e22;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
 }
